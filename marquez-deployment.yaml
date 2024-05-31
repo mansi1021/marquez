@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marquez
+  labels:
+   app: marquez
+spec:
+  replicas: 1
+  selector:
+   matchLabels:
+    app: marquez
+  template:
+    metadata:
+      labels:
+        app: marquez
+    spec:
+      containers:
+      - name: marquez                                                                          
+        image: marquezproject/marquez:latest     
+        ports:
+        
+        - containerPort: 5000
+
