@@ -1,0 +1,13 @@
+# Dockerfile.api
+
+FROM marquezproject/marquez:latest
+
+# Set environment variables for Marquez API
+ENV MARQUEZ_DB_USER=marquez
+ENV MARQUEZ_DB_PASSWORD=marquez
+ENV MARQUEZ_DB=marquez
+ENV MARQUEZ_HOST=postgres  
+ENV MARQUEZ_PORT=5432
+
+# Command to run the Marquez API
+CMD ["java", "-jar", "marquez-api.jar"]
